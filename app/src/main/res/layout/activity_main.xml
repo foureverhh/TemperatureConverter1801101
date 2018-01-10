@@ -27,39 +27,11 @@
 
             <TextView
                 android:id="@+id/txv"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/temperature"
-                android:textSize="30sp"
-                android:layout_width="wrap_content" />
-
-            <RadioGroup
-                android:id="@+id/unit"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_width="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/unitF"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/unitF" />
-
-                <RadioButton
-                    android:id="@+id/unitC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/unitC" />
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/value"
@@ -70,6 +42,7 @@
                 android:hint="@string/value"
                 android:inputType="textPersonName|numberDecimal"
                 android:singleLine="true" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -77,28 +50,79 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/degF"
+            <RadioGroup
+                android:id="@+id/unit"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/degF"
-                android:textSize="45sp"
-                android:layout_width="wrap_content" />
+                android:layout_weight="0">
+
+                <RadioButton
+                    android:id="@+id/unitF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/unitF" />
+
+                <RadioButton
+                    android:id="@+id/unitC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/unitC" />
+
+                <RadioButton
+                    android:id="@+id/unitAbsolute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/unitAbsolute" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="46dp">
 
             <TextView
                 android:id="@+id/degC"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="@string/degC"
-                android:textSize="45sp"
-                android:layout_width="wrap_content" />
+                android:textAlignment="center"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/degF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/degF"
+                android:textAlignment="center"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/degA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/degA"
+                android:textAlignment="center"
+                android:textSize="45sp" />
+
         </LinearLayout>
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

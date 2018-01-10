@@ -11,4 +11,6 @@
         <string name="deg" />
         <string name="degF">charF</string>
         <string name="degC">charC</string>
+        <string name="unitAbsolute">absolute</string>
+        <string name="degA">abs</string>
 </resources>

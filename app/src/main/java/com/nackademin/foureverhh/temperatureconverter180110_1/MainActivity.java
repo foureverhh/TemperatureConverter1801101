@@ -50,17 +50,25 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     {
         TextView degF =(TextView)findViewById(R.id.degF);
         TextView degC =(TextView)findViewById(R.id.degC);
+        TextView degA =(TextView)findViewById(R.id.degA);
 
-        double f=0,c=0;
+        double f=0,c=0,a=0;
 
         if(unit.getCheckedRadioButtonId()==R.id.unitF)
         {
             f=Double.parseDouble(value.getText().toString());
             c=(f-32)*5/9;
+            a=c+373.15;
         }else if(unit.getCheckedRadioButtonId()==R.id.unitC)
         {
             c=Double.parseDouble(value.getText().toString());
             f=c*9/5+32;
+            a=c+273.15;
+        }else if(unit.getCheckedRadioButtonId()==R.id.unitAbsolute)
+        {
+            a=Double.parseDouble(value.getText().toString());
+            c=a-273.15;
+            f=f=c*9/5+32;
         }
 
         if(value.length()==0)
@@ -70,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         {
             degF.setText(String.format("%.1f",c)+" "+getResources().getString(R.string.charC));
             degC.setText(String.format("%.1f",f)+" "+getResources().getString(R.string.charF));
+            degA.setText(String.format("%.2f",a));
         }
     }
 }
