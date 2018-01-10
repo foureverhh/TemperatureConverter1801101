@@ -1,0 +1,14 @@
+<resources>
+        <string name="app_name">Temperature converter</string>
+        <string name="hello_world">Hello world!</string>
+        <string name="charF">"\u2109"</string>
+        <string name="charC">"\u2103"</string>
+        <string name="section_setting">Setting</string>
+        <string name="temperature">输入温度</string>
+        <string name="unitC">摄氏</string>
+        <string name="unitF">华氏</string>
+        <string name="value">Input here</string>
+        <string name="deg" />
+        <string name="degF">charF</string>
+        <string name="degC">charC</string>
+</resources>
